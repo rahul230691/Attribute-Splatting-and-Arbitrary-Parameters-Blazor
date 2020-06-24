@@ -1,0 +1,20 @@
+﻿<!-- Child Component -->
+
+<div class="form-group">
+    <label>Name :</label>
+    <input type="text" class="form-control" @attributes="ArbitraryAttributes" @bind="Value">
+</div>
+
+@code {
+    [Parameter]
+    public Dictionary<string, object> ArbitraryAttributes { get; set; } = new Dictionary<string, object>()
+    {
+        { "id", "txtName" },
+        { "name", "txtName" },
+        { "placeholder", "Type Your name - from Child" },
+        { "maxlength", 5}
+    };
+
+    [Parameter]
+    public string Value { get; set; }
+}

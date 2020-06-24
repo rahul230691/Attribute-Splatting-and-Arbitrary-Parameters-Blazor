@@ -1,0 +1,31 @@
+﻿@page "/"
+<!-- Parent Component -->
+@*<h3>Blazor Component with Explicitly Declared Parameters</h3>*@
+
+@*<DisplayName PlaceHolderValue="Enter Your Name" />*@
+
+@*<h3>Blazor Attribute Splatting with Explicit Parameter</h3>*@
+
+@*<DisplayNameWithAttributeSplatting ArbitraryAttributes="attributesFromParent" Value="Rahul"></DisplayNameWithAttributeSplatting>*@
+
+<!-- Parent Component -->
+
+<h3>Blazor Attribute Splatting with Arbitrary Parameters</h3>
+
+@*<DisplayNameWithArbitraryParameters ArbitraryAttributes="attributesFromParent" required="true" />*@
+
+<DisplayNameWithArbitraryParameters id="txtName" name="txtName" 
+                                    placeholder="Type your name - from Parent" 
+                                    maxlength="10" newattribute="newvalue" 
+                                    required="true" />
+
+@code{
+    @*public Dictionary<string, object> attributesFromParent { get; set; } = new Dictionary<string, object>()
+    {
+            { "id", "txtName" },
+            { "name", "txtName" },
+            { "placeholder", "Type Your name - from Parent" },
+            { "maxlength", 10},
+            { "newattribute", "newvalue"}
+        };*@
+}
